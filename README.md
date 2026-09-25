@@ -82,7 +82,10 @@ INSERT INTO `admin` (`username`, `name`, `password`) VALUES
 ('admin', 'admin', '12345');
 
 #grant permissions
+In older MySQL versions, this syntax worked:
 GRANT ALL PRIVILEGES ON customers.* TO 'root'@'%' IDENTIFIED BY 'admin123';
+#In MySQL 8, you generally create the user separately and then grant privileges. user already created
+GRANT ALL PRIVILEGES ON customers.* TO 'admin'@'%';
 FLUSH PRIVILEGES;
 
 
