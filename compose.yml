@@ -15,7 +15,7 @@
 #         - mysqldb
       
 services:
-  db:
+  mysqldb:
     image: naveenkumar30/bloodbank:dbImage${BUILD_NUMBER}
     ports:
       - "3306:3306"
