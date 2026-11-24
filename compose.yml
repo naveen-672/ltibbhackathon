@@ -20,7 +20,7 @@ services:
     ports:
       - "3306:3306"
     deploy:
-      replicas: 3
+      replicas: 1
 
   app:
     image: naveenkumar30/bloodbank:appImage${BUILD_NUMBER}
